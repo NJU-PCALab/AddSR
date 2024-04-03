@@ -21,3 +21,21 @@
 
 
 ![AddSR](figs/real_world.png)
+
+
+## ❤️ Acknowledgments
+This project is based on [SeeSR](https://github.com/cswry/SeeSR), [diffusers](https://github.com/huggingface/diffusers), [BasicSR](https://github.com/XPixelGroup/BasicSR) and [ADD](https://arxiv.org/abs/2311.17042). Thanks for their awesome works.
+
+## 🎓Citations
+If our project helps your research or work, please consider citing our paper:
+
+```
+@misc{xie2024addsr,
+      title={AddSR: Accelerating Diffusion-based Blind Super-Resolution with Adversarial Diffusion Distillation}, 
+      author={Rui Xie and Ying Tai and Kai Zhang and Zhenyu Zhang and Jun Zhou and Jian Yang},
+      year={2024},
+      eprint={2404.01717},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
