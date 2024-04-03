@@ -11,5 +11,5 @@
 - [ ] Release the pretrained model
 - [ ] Release the training code
 
-## 🔎 Overview framework
+## 🔎 Method Overview
 ![AddSR](figs/framework.png)
