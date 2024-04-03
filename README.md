@@ -16,7 +16,7 @@
 
 ## 📷 Results Display
 [<img src="figs/flower.png" height="320px"/>](https://imgsli.com/MjUyNTc5) [<img src="figs/building.png" height="320px"/>](https://imgsli.com/MjUyNTkx) 
-[<img src="figs/nature.png" height="320px"/>](https://imgsli.com/MjUyNTgx)
+[<img src="figs/nature.png" height="320px"/>](https://imgsli.com/MjUyNTgx) [<img src="figs/human.png" height="320px"/>](https://imgsli.com/MjUyNTky)
 
 
 
