@@ -8,7 +8,7 @@
 
 
 ### 💬 News
-- **2024.04.09** Release the pretrained model and testing code.
+- **2024.04.09**  Release the pretrained model and testing code.
 
 
 ### 📌 TODO
