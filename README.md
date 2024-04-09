@@ -7,6 +7,10 @@
 <sup>1</sup>Southwest University, <sup>2</sup>Nanjing University, <sup>3</sup>Nanjing University of Science and Technology. 
 
 
+### 💬 News
+- **2024.04.09** 🚀 Release the pretrained model and testing code.
+
+
 ### 📌 TODO
 - [ ] Release the pretrained model
 - [ ] Release the training code
@@ -22,6 +26,42 @@
 
 ![AddSR](figs/real_world.png)
 
+## ⚙️ Dependencies and Installation
+```
+## git clone this repository
+git clone https://github.com/NJU-PCALab/AddSR.git
+cd AddSR
+
+# create an environment with python >= 3.8
+conda create -n addsr python=3.8
+conda activate addsr
+pip install -r requirements.txt
+```
+
+## 🚀 Inference
+#### Step 1: Download the pretrained models
+- Download the pretrained SD-2-base models from [HuggingFace](https://huggingface.co/stabilityai/stable-diffusion-2-base).
+- Download the AddSR models from [GoogleDrive](https://drive.google.com/file/d/19dMAc4mzFSSfU23y5g44v3nZS-edubGw/view?usp=sharing)
+- Download the DAPE models from [GoogleDrive](https://drive.google.com/drive/folders/12HXrRGEXUAnmHRaf0bIn-S8XSK4Ku0JO?usp=drive_link)
+
+You can put the models into `preset/`.
+
+#### Step 2: Prepare testing data
+You can put the testing images in the `preset/datasets/test_datasets`.
+
+#### Step 3: Running testing command
+```
+python test_addsr.py \
+--pretrained_model_path preset/models/stable-diffusion-2-base \
+--prompt '' \
+--addsr_model_path preset/models/addsr \
+--ram_ft_path preset/models/DAPE.pth \
+--image_path preset/datasets/test_datasets \
+--output_dir preset/datasets/output \
+--start_point lr \
+--num_inference_steps 4 \
+--PSR_weight 0.5
+```
 
 ## ❤️ Acknowledgments
 This project is based on [SeeSR](https://github.com/cswry/SeeSR), [diffusers](https://github.com/huggingface/diffusers), [BasicSR](https://github.com/XPixelGroup/BasicSR) and [ADD](https://arxiv.org/abs/2311.17042). Thanks for their awesome works.
