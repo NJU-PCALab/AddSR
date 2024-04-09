@@ -7,7 +7,7 @@
 <sup>1</sup>Southwest University, <sup>2</sup>Nanjing University, <sup>3</sup>Nanjing University of Science and Technology. 
 
 
-### 💬 News
+### 📰 News
 - **2024.04.09**  The pretrained AddSR model and testing code have been released.
 
 
