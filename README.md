@@ -12,7 +12,7 @@
 
 
 ### 📌 TODO
-- [ ] Release the pretrained model
+- ✅ Release the pretrained model
 - [ ] Release the training code
 
 ## 🔎 Method Overview
