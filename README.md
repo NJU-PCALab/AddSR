@@ -70,7 +70,7 @@ python test_addsr.py \
 ## 🌈 Train 
 
 #### Step1: Download the pretrained models
-Download the pretrained [SD-2-base models](https://huggingface.co/stabilityai/stable-diffusion-2-base), [RAM](https://huggingface.co/spaces/xinyu1205/recognize-anything/blob/main/ram_swin_large_14m.pth) and [DINOv2](https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth). You can put them into `preset/models`.
+Download the pretrained [SD-2-base models](https://huggingface.co/stabilityai/stable-diffusion-2-base), [RAM](https://huggingface.co/spaces/xinyu1205/recognize-anything/blob/main/ram_swin_large_14m.pth), [SeeSR](https://drive.google.com/drive/folders/12HXrRGEXUAnmHRaf0bIn-S8XSK4Ku0JO?usp=drive_link) and [DINOv2](https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth). You can put them into `preset/models`.
 
 #### Step2: Prepare training data
 We employ the same preprocessing measures as SeeSR. More details can be found at [HERE](https://github.com/cswry/SeeSR?tab=readme-ov-file#step2-prepare-training-data)
@@ -79,6 +79,10 @@ We employ the same preprocessing measures as SeeSR. More details can be found at
 ```
  CUDA_VISIBLE_DEVICES="0, 1, 2, 3" accelerate launch train_addsr.py \
 --pretrained_model_name_or_path="preset/models/stable-diffusion-2-base" \
+--controlnet_model_name_or_path_Tea='preset/seesr' \
+--unet_model_name_or_path_Tea='preset/seesr' \
+--controlnet_model_name_or_path_Stu='preset/seesr' \
+--unet_model_name_or_path_Stu='preset/seesr' \
 --dino_path = "preset/models/dinov2_vits14_pretrain.pth" \
 --output_dir="./experience/addsr" \
 --root_folders 'DataSet/training' \
