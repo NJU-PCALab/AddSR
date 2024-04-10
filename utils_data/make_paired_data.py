@@ -20,8 +20,8 @@ from ram.models import ram
 from ram import inference_ram as inference
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--gt_path", nargs='+', default=["/data1/rx_data/SeeSR/E_DF2K"], help='the path of high-resolution images')
-parser.add_argument("--save_dir", type=str, default="/data1/rx_data/SeeSR/training_data_v2", help='the save path of the training dataset.')
+parser.add_argument("--gt_path", nargs='+', default=[""], help='the path of high-resolution images')
+parser.add_argument("--save_dir", type=str, default="", help='the save path of the training dataset.')
 parser.add_argument("--start_gpu", type=int, default=1, help='if you have 5 GPUs, you can set it to 1/2/3/4/5 on five gpus for parallel processing., which will save your time. ')  
 parser.add_argument("--batch_size", type=int, default=1, help='smaller batch size means much time but more extensive degradation for making the training dataset.')  
 parser.add_argument("--epoch", type=int, default=10, help='decide how many epochs to create for the dataset.')
