@@ -7,7 +7,7 @@
 <sup>1</sup>Southwest University, <sup>2</sup>Nanjing University, <sup>3</sup>Nanjing University of Science and Technology. 
 
 
-### 📰 News
+### 🔆 Updates
 - **2024.04.09**  The pretrained AddSR model and testing code have been released.
 
 
@@ -67,8 +67,43 @@ python test_addsr.py \
 #### Test Benchmark
 `RealLR200`, `RealSR` and `DRealSR` can be downloaded from [SeeSR](https://drive.google.com/drive/folders/1L2VsQYQRKhWJxe6yWZU9FgBWSgBCk6mz?usp=drive_link).
 
+## 🌈 Train 
+
+#### Step1: Download the pretrained models
+Download the pretrained [SD-2-base models](https://huggingface.co/stabilityai/stable-diffusion-2-base), [RAM](https://huggingface.co/spaces/xinyu1205/recognize-anything/blob/main/ram_swin_large_14m.pth) and [DINOv2](https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth). You can put them into `preset/models`.
+
+#### Step2: Prepare training data
+We employ the same preprocessing measures as SeeSR. More details can be found at [HERE](https://github.com/cswry/SeeSR?tab=readme-ov-file#step2-prepare-training-data)
+
+#### Step3: Training for AddSR
+```
+ CUDA_VISIBLE_DEVICES="0, 1, 2, 3" accelerate launch train_addsr.py \
+--pretrained_model_name_or_path="preset/models/stable-diffusion-2-base" \
+--dino_path = "preset/models/dinov2_vits14_pretrain.pth" \
+--output_dir="./experience/addsr" \
+--root_folders 'DataSet/training' \
+--ram_ft_path 'preset/models/DAPE.pth' \
+--enable_xformers_memory_efficient_attention \
+--mixed_precision="fp16" \
+--resolution=512 \
+--learning_rate=2e-5 \
+--train_batch_size=2 \
+--gradient_accumulation_steps=2 \
+--null_text_ratio=0.5 \
+--dataloader_num_workers=0 \
+--max_train_steps=50000 \
+--checkpointing_steps=5000
+```
+- `--pretrained_model_name_or_path` the path of pretrained SD model from Step 1
+- `--root_folders` the path of your training datasets from Step 2
+- `--ram_ft_path` the path of your DAPE model from Step 3
+
+
 ## ❤️ Acknowledgments
 This project is based on [SeeSR](https://github.com/cswry/SeeSR), [diffusers](https://github.com/huggingface/diffusers), [BasicSR](https://github.com/XPixelGroup/BasicSR), [ADD](https://arxiv.org/abs/2311.17042) and [StyleGAN-T](https://github.com/autonomousvision/stylegan-t). Thanks for their awesome works.
+
+## 📧 Contact
+If you have any inquiries, please don't hesitate to reach out via email at 'ruixie0097@gmail.com'
 
 ## 🎓Citations
 If our project helps your research or work, please consider citing our paper:
