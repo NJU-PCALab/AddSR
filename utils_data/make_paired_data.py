@@ -1,8 +1,3 @@
-'''
- * SeeSR: Towards Semantics-Aware Real-World Image Super-Resolution 
- * Modified from diffusers by Rongyuan Wu
- * 24/12/2023
-'''
 import os
 import sys
 sys.path.append(os.getcwd())
