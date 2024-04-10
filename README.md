@@ -63,6 +63,10 @@ python test_addsr.py \
 --PSR_weight 0.5
 ```
 
+
+#### Test Benchmark
+`RealLR200`, `RealSR` and `DRealSR` can be downloaded from [SeeSR](https://drive.google.com/drive/folders/1L2VsQYQRKhWJxe6yWZU9FgBWSgBCk6mz?usp=drive_link).
+
 ## ❤️ Acknowledgments
 This project is based on [SeeSR](https://github.com/cswry/SeeSR), [diffusers](https://github.com/huggingface/diffusers), [BasicSR](https://github.com/XPixelGroup/BasicSR), [ADD](https://arxiv.org/abs/2311.17042) and [StyleGAN-T](https://github.com/autonomousvision/stylegan-t). Thanks for their awesome works.
 
