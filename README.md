@@ -103,7 +103,7 @@ We employ the same preprocessing measures as SeeSR. More details can be found at
 This project is based on [SeeSR](https://github.com/cswry/SeeSR), [diffusers](https://github.com/huggingface/diffusers), [BasicSR](https://github.com/XPixelGroup/BasicSR), [ADD](https://arxiv.org/abs/2311.17042) and [StyleGAN-T](https://github.com/autonomousvision/stylegan-t). Thanks for their awesome works.
 
 ## 📧 Contact
-If you have any inquiries, please don't hesitate to reach out via email at 'ruixie0097@gmail.com'
+If you have any inquiries, please don't hesitate to reach out via email at `ruixie0097@gmail.com`
 
 ## 🎓Citations
 If our project helps your research or work, please consider citing our paper:
