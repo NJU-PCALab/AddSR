@@ -1,8 +1,3 @@
-'''
- * SeeSR: Towards Semantics-Aware Real-World Image Super-Resolution 
- * Modified from diffusers by Rongyuan Wu
- * 24/12/2023
-'''
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -42,7 +37,7 @@ ram_transforms = transforms.Compose([
 
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument("--root_path", type=str, default="/data1/rx_data/SeeSR/training_data_v2", help='the dataset you want to tag.') #
+parser.add_argument("--root_path", type=str, default="", help='the dataset you want to tag.') #
 parser.add_argument("--start_gpu", type=int, default=0, help='if you have 5 GPUs, you can set it to 0/1/2/3/4 when using different GPU for parallel processing. It will save your time.') 
 parser.add_argument("--all_gpu", type=int, default=1, help='if you set --start_gpu max to 5, please set it to 5') 
 args = parser.parse_args()
