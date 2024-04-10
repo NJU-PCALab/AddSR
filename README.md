@@ -6,7 +6,7 @@
 
 <sup>1</sup>Southwest University, <sup>2</sup>Nanjing University, <sup>3</sup>Nanjing University of Science and Technology. 
 
-:star: If AddSR helps your images or projects, please consider giving this repo a star. Your support is greatly appreciated!
+:star: If AddSR helps your images or projects, please consider giving this repo a star. Your support is greatly appreciated! :blush:
 
 ### 🔆 Updates
 - **2024.04.10**  The training code has been released. Please note that it currently only supports a batch size of 2 per device. We will make it possible to support different batchsizes in the future.
