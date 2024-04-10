@@ -8,12 +8,13 @@
 
 
 ### 🔆 Updates
+- **2024.04.10**  The training code has been released. Please note that it currently only supports a batch size of 2 per device. We will make it possible to support different batchsizes in the future.
 - **2024.04.09**  The pretrained AddSR model and testing code have been released.
 
 
 ### 📌 TODO
 - ✅ Release the pretrained model
-- [ ] Release the training code
+- ✅ Release the training code
 
 ## 🔎 Method Overview
 ![AddSR](figs/framework.png)
