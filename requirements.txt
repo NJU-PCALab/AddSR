@@ -13,14 +13,12 @@ huggingface_hub==0.21.4
 imageio==2.34.0
 lmdb==1.4.1
 loralib==0.1.2
-mc==0.0
 numpy==1.26.4
 omegaconf==2.3.0
 opencv_python==4.9.0.80
 packaging==24.0
 Pillow==10.3.0
 pytorch_lightning==2.2.1
-PyYAML==6.0.1
 PyYAML==6.0.1
 Requests==2.31.0
 safetensors==0.4.2
