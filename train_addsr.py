@@ -62,16 +62,32 @@ def mean_flat(tensor):
     """
     return tensor.mean(dim=list(range(1, len(tensor.shape))))
 
+#def TA_weight(t):
+#    if t == 999:
+#        s = 1
+#    elif t == 749:
+#        s = 2
+#    elif t == 499:
+#        s = 3
+#    else:
+#        s = 4
+#
+#    weight = 0.2 * s + 0.5
+#    return weight
+
 def TA_weight(t):
-    if t == 999:
-        weight = 0.85
-    elif t == 749:
-        weight = 1
-    elif t == 499:
-        weight = 1.2
-    else:
-        weight = 1.4
-    return weight
+   if t == 999:
+       s = 1
+   elif t == 749:
+       s = 2
+   elif t == 499:
+       s = 3
+   else:
+       s = 4
+
+   weight = 0.5 * 2.1 ** (s-1)
+   return weight
+
 
 # Will error if the minimal version of diffusers is not installed. Remove at your own risks.
 check_min_version("0.21.0.dev0")
@@ -1090,7 +1106,7 @@ optimizer = torch.optim.AdamW(
 
 # 实例化提取cls_lr的特征网络
 model_fea = vit_small(patch_size=14, img_size=518, block_chunks=0, init_values=1.0)
-util_net.reload_model(model_fea, torch.load('weights/dinov2_vits14_pretrain.pth'))
+util_net.reload_model(model_fea, torch.load('/home/test/Workspace/ruixie/AddSR/preset/models/dinov2_vits14_pretrain.pth'))
 model_fea.requires_grad_(False)
 
 # 实例化判别器头
@@ -1407,7 +1423,7 @@ for epoch in range(first_epoch, args.num_train_epochs):
                         i,
                         t_tea[counter],
                         encoder_hidden_states=encoder_hidden_states,
-                        controlnet_cond=pixel_values / 2 + 0.5,
+                        controlnet_cond= pixel_values / 2 + 0.5,
                         return_dict=False,
                         image_encoder_hidden_states=ram_encoder_hidden_states_tea,
                     )
