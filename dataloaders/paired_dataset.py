@@ -85,10 +85,6 @@ class PairedCaptionDataset(data.Dataset):
             file = open(tag_path, 'r')
             tag = file.read()
             file.close()
-            caption = "Caption:"
-            degradation = "Negativity: blur, noise, compression, dotted, smooth, low resolution, dirty, messy, low quality"
-            caption_str = caption + tag
-            degradation_tag = caption_str + "; " + degradation
             #print(tag)
 
         example = dict()
@@ -96,7 +92,6 @@ class PairedCaptionDataset(data.Dataset):
         example["conditioning_pixel_values"] = lq_img.squeeze(0)
         example["pixel_values"] = gt_img.squeeze(0) * 2.0 - 1.0
         example["input_ids"] = self.tokenize_caption(caption=tag).squeeze(0)
-        example["degra_ids"] = self.tokenize_caption(caption=degradation_tag).squeeze(0)
 
         lq_img = lq_img.squeeze()
         gt_img = gt_img.squeeze()
