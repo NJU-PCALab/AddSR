@@ -125,5 +125,5 @@ If our project helps your research or work, please consider citing our paper:
 }
 ```
 
-## 🎫 License
+## :page_facing_up: License
 This project is distributed under the terms of the [Apache 2.0 license](LICENSE).
