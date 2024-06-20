@@ -126,4 +126,4 @@ If our project helps your research or work, please consider citing our paper:
 ```
 
 ## :page_facing_up: License
-This project is distributed under the terms of the [Apache 2.0 license](LICENSE).
+This project is distributed under the terms of the [Apache 2.0 license](LICENSE). Since AddSR is based on [SeeSR](https://github.com/cswry/SeeSR?tab=readme-ov-file#-license), [StyleGAN-T](https://github.com/autonomousvision/stylegan-t#license), and [ADD](https://github.com/Stability-AI/generative-models/tree/main/model_licenses), users must also follow their licenses to use this project.
