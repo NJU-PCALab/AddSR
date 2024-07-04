@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ## 🚀 Inference
 #### Step 1: Download the pretrained models
 - Download the pretrained SD-2-base models from [HuggingFace](https://huggingface.co/stabilityai/stable-diffusion-2-base).
-- Download the AddSR models from [GoogleDrive](https://drive.google.com/file/d/1de6QS8MT0LlEM7FYEK56gkofVIpGa9dn/view?usp=sharin)
+- Download the AddSR models from [GoogleDrive](https://drive.google.com/file/d/19IB8vIdYeF65ixIvwIjZzPPuVka4sjec/view?usp=sharing)
 - Download the DAPE models from [GoogleDrive](https://drive.google.com/drive/folders/12HXrRGEXUAnmHRaf0bIn-S8XSK4Ku0JO?usp=drive_link)
 
 You can put the models into `preset/`.
