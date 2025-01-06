@@ -117,7 +117,7 @@ def load_addsr_pipeline(args, accelerator, enable_xformers_memory_efficient_atte
 
 def load_tag_model(args, device='cuda'):
     
-    model = ram(pretrained='/home/amax/workspace/ruixie/SeeSR/preset/ram_swin_large_14m.pth',
+    model = ram(pretrained='/path/to/your/local/ram_swin_large_14m/weight', # The instructions for downloading ram_swin_large_14m can be found in the README.md file.
                 pretrained_condition=args.ram_ft_path,
                 image_size=384,
                 vit='swin_l')
