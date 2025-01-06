@@ -2,7 +2,7 @@ diffusers==0.25.0
 torch==2.0.1
 pytorch_lightning==2.3.3
 accelerate==1.2.1
-transformers==4.25.0
+transformers==4.37.2
 xformers==0.0.22    
 loralib==0.1.2
 fairscale==0.4.13
