@@ -54,8 +54,8 @@ logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
 from ram.models.ram_lora import ram
 from ram import get_transform
 
-RAM = ram(pretrained='/home/amax/workspace/ruixie/SeeSR/preset/ram_swin_large_14m.pth',
-            pretrained_condition='/home/amax/workspace/ruixie/SeeSR/preset/models/DAPE.pth',
+RAM = ram(pretrained='/path/to/your/local/ram_swin_large_14m/weight',
+            pretrained_condition='/path/to/your/local/DAPE/weight',    # The instructions for downloading ram_swin_large_14m and DAPE weights can be found in the README.md file.
             image_size=384,
             vit='swin_l')
 RAM.eval()
