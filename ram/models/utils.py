@@ -128,7 +128,7 @@ class GroupWiseLinear(nn.Module):
 
 
 def init_tokenizer():
-    tokenizer = BertTokenizer.from_pretrained('/home/amax/workspace/ruixie/SeeSR/ram/bert')
+    tokenizer = BertTokenizer.from_pretrained('/path/to/your/local/bert/path') # refer to this issue (https://github.com/NJU-PCALab/AddSR/issues/7) to download the weight.
     tokenizer.add_special_tokens({'bos_token': '[DEC]'})
     tokenizer.add_special_tokens({'additional_special_tokens': ['[ENC]']})
     tokenizer.enc_token_id = tokenizer.additional_special_tokens_ids[0]
